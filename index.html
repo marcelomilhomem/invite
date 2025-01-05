@@ -14,11 +14,11 @@
       overflow: hidden;
       background-color: #f2d2bd;
       font-family: Arial, Helvetica, sans-serif;
-      padding: 2rem;
     }
 
     img {
       border-radius: 0.5rem;
+      max-width: 100%;
     }
 
     #evil-button {
@@ -40,6 +40,7 @@
       gap: 1rem;
       justify-content: center;
       align-items: center;
+      padding: 2rem;
     }
 
     .card h2 {
@@ -58,6 +59,13 @@
 
     .button-container {
       display: flex;
+    }
+
+    .links-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
     }
 
     a {
@@ -94,7 +102,7 @@
               clique em "Sim"
             </h2>
             <p>
-              Ou clique em nao, <br />
+              Ou clique em "Não", <br />
               para ver a magia acontecer
             </p>
           </div>
@@ -112,7 +120,7 @@
               >Sim</a
             >
           </div>
-          <a href="#" id="evil-button" class="negative-link">Nao</a>
+          <a href="#" id="evil-button" class="negative-link">Não</a>
         </div>
       </div>
     </div>
@@ -189,15 +197,23 @@
           case "about":
             contentDiv.innerHTML = `
             <div class="card">
-				<h2>Jantar dia 11 de Janeiro (Sabado), as 20h30? <br> Mesmo lugar da ultima vez</h2>
-				<img
+              <div>
+				        <h2>Jantar dia 11 de Janeiro? <br> Mesmo lugar da ultima vez</h2>
+                <p>Flixbus 5€</p>
+              </div>
+				    <img
                   id="image"
-                  src="https://i.pinimg.com/200x150/bb/b1/ee/bbb1ee8942af3740d62ca8068769349f.jpg"
+                  src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExajNvb3N1eGM0dzdrM2lqZHprZXo0amd4cWg3dDQ1bTh0b2FiM210YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xFyn0emm4qvvAA/giphy.webp"
                   alt=""
                 /> 
-				<a class="positive-link" id="next-button" href="#" onclick="changeContent('yes')">
+                <div class="links-container">
+				    <a class="positive-link" id="next-button" href="#" onclick="changeContent('yes')">
                   Sim
                 </a>
+                  <a class="positive-link" id="next-button" href="#" onclick="changeContent('yes')">
+                  Claro que sim
+                </a>
+                </div>
             </div>    
 			`;
             break;
@@ -221,11 +237,14 @@
             <div class="card">
 				<img
                   id="image"
-                  src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejdjbDhqNG12YWlkMndraHF3dmpxOXA0Y3JyanFxemM3cTh3MzJrZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xxhKYiOOIs9mGZz1Hy/giphy.webp"
+                  src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXFhMnd4N2dtZ3p4Yjd0dzJwbTMyZ2JtNjJmOWllb210OHp1eDBvMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J9NRpOeS7i54xnW/giphy.webp"
                   alt=""
                 /> 
-                <h2>Como amigos, nao te preocupes <br> So acho que merecemos um jantar!</h2>
-				<a class="positive-link" id="next-button" href="https://www.instagram.com/milhomemmm/profilecard/?igsh=ZGNqZ2VlZXc2eWx1" onclick="changeContent('end')">
+                <div>
+                <h2>Calma, calma!</h2>
+                <p>Como amigos! Um jantar como a ultima vez!</p>
+                </div>
+				<a class="positive-link" id="next-button" href="https://www.instagram.com/milhomemmm/?igsh=ZGNqZ2VlZXc2eWx1" onclick="changeContent('end')">
                   Avisar ao Marcelo
                 </a>
             </div>    
